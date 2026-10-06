@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Ayushi Soni — Designer Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF9EC;--card:#fff;--ink:#14213D;--blue:#0B4DB0;--cyan:#12B5D6;--sun:#FFC93C;--coral:#FF6B5B;--mint:#3DDC97;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10172B;--card:#1B2542;--ink:#FFF4D6}}
+:root[data-theme="dark"]{--bg:#10172B;--card:#1B2542;--ink:#FFF4D6}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(10px + env(safe-area-inset-top,0px)) 5vw 10px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px)}
+nav b{font-family:Caveat;font-size:1.7rem;color:var(--blue)}nav div{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.85rem;position:relative}
+nav a:after{content:"";position:absolute;left:0;bottom:-4px;height:3px;width:0;background:var(--coral);border-radius:3px;transition:.3s}nav a:hover:after{width:100%}
+section{min-height:100vh;padding:90px 6vw 60px;position:relative}
+h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:800;color:var(--blue);margin-bottom:8px}
+h2 small{display:block;font-family:Caveat;font-size:1.6rem;color:var(--cyan);font-weight:600}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.6;animation:fl 8s ease-in-out infinite;z-index:0}
+@keyframes fl{50%{transform:translateY(-26px) scale(1.08)}}
+#home{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:20px;overflow:hidden}
+#home{padding:90px 6vw 0 0;min-height:100vh}#home .pic{position:relative;z-index:1;align-self:end;justify-self:start}#home .hero{align-self:center}#home img{display:block;width:100%;max-height:calc(100vh - 90px);object-fit:contain;object-position:left bottom;mix-blend-mode:multiply;animation:fl 6s ease-in-out infinite}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #home img{background:#fff;border-radius:24px;mix-blend-mode:normal}}
+.hero{position:relative;z-index:1;text-align:center}
+.hero .a{font-family:Caveat;font-size:clamp(2.2rem,5vw,3.6rem);color:var(--cyan)}
+.hero .b{font-size:clamp(2.8rem,8vw,6rem);font-weight:800;color:var(--blue);line-height:1;letter-spacing:-2px}
+.ch{display:inline-block;opacity:0;transform:translateY(60px) rotate(8deg);animation:up .7s cubic-bezier(.2,1.4,.4,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.type{margin-top:22px;font-size:1.2rem;font-weight:600;min-height:1.8em}.type span{color:var(--coral);border-right:3px solid var(--sun);padding-right:4px}
+.btn{display:inline-block;margin-top:22px;padding:13px 28px;background:var(--coral);color:#fff;border-radius:40px;font-weight:800;text-decoration:none;transition:.3s;box-shadow:0 6px 0 #c9483a}.btn:hover{transform:translateY(-3px) rotate(-2deg)}
+#about{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;background:linear-gradient(135deg,#fff4cc,var(--bg))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #about{background:var(--bg)}}
+#about p{font-size:1.15rem;line-height:1.8;margin:14px 0}
+#about img{width:100%;border-radius:200px 200px 28px 28px;box-shadow:14px 14px 0 var(--sun);transition:.5s}#about img:hover{transform:rotate(-2deg) scale(1.02)}
+.quote{font-family:Caveat;font-size:1.7rem;color:var(--coral)}
+.chips span{display:inline-block;margin:4px 6px 0 0;padding:6px 14px;border-radius:30px;background:var(--cyan);color:#fff;font-weight:600;font-size:.8rem}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:30px}@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.grid{grid-template-columns:1fr}}.card{display:block;color:inherit;text-decoration:none}.go{display:inline-block;margin-top:8px;font-weight:800;font-size:.85rem;color:var(--coral)}
+.card{background:var(--card);border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(11,77,176,.15);transition:.4s;border:3px solid transparent}
+.card:hover{transform:translateY(-8px) rotate(-.6deg);border-color:var(--sun)}
+.ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:#222}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:kb 12s infinite}
+.ph img:nth-child(2){animation-delay:3s}.ph img:nth-child(3){animation-delay:6s}.ph img:nth-child(4){animation-delay:9s}
+@keyframes kb{0%{opacity:0;transform:scale(1)}6%{opacity:1}25%{opacity:1}31%{opacity:0;transform:scale(1.12)}100%{opacity:0}}
+.card .t{padding:18px 20px 22px}.tag{font-size:.7rem;font-weight:800;letter-spacing:1px;color:var(--coral)}
+.card h3{font-size:1.1rem;margin:4px 0 10px;color:var(--blue)}
+.card li{list-style:none;font-size:.82rem;line-height:1.5;padding-left:22px;position:relative;margin-bottom:6px}
+.card li:before{content:"★";position:absolute;left:0;color:var(--sun)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:30px}
+.tile{height:300px;text-shadow:0 2px 8px rgba(0,0,0,.45);border-radius:26px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;cursor:pointer;transition:.4s;font-weight:800;font-size:1.5rem;position:relative;overflow:hidden;border:0;text-align:left;font-family:inherit}
+.tile:hover{transform:scale(1.05) rotate(-2deg)}.tile small{font-weight:600;font-size:.85rem;opacity:.95}.tile i{position:absolute;top:14px;right:18px;font-size:3rem;font-style:normal}
+.tile:nth-child(1){background:linear-gradient(135deg,var(--coral),var(--sun))}.tile:nth-child(2){background:linear-gradient(135deg,var(--blue),var(--cyan))}
+.tile:nth-child(3){background:linear-gradient(135deg,#7B5CF0,var(--coral))}.tile:nth-child(4){background:linear-gradient(135deg,#1fa971,var(--mint))}
+#modal{position:fixed;inset:0;background:rgba(10,20,50,.9);z-index:50;display:none;overflow:auto;padding:calc(30px + env(safe-area-inset-top,0px)) 5vw 40px}
+#modal.on{display:block;animation:pop .4s}@keyframes pop{from{opacity:0;transform:scale(.9)}}
+.tagline{text-align:center;font-family:Caveat;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--coral);margin-top:50px}#modal h2{color:var(--sun)}#x{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:20px;font-size:2rem;background:var(--coral);color:#fff;border:0;border-radius:50%;width:46px;height:46px;cursor:pointer}
+.gal{column-width:260px;column-gap:20px;margin-top:20px}
+.gal figure{break-inside:avoid;margin-bottom:20px;cursor:zoom-in;background:#fff;padding:10px 10px 22px;border-radius:6px;transform:rotate(var(--r));transition:.3s}.gal figure:hover{transform:scale(1.06) rotate(0)}
+.gal img,.gal .ph2{width:100%;display:block}#lb{position:fixed;inset:0;z-index:60;background:rgba(5,10,30,.95);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}#lb.on{display:flex}#lb img{max-width:100%;max-height:100%;border-radius:6px}
+.ph2{background:repeating-linear-gradient(45deg,#fff3c4,#fff3c4 12px,#ffe18a 12px,#ffe18a 24px);display:flex;align-items:center;justify-content:center;color:#7a5a00;font-family:Caveat;font-size:1.4rem;text-align:center}
+#contact{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(120deg,var(--blue),var(--cyan),#7B5CF0,var(--coral),var(--blue));color:#fff}
+#contact h2{color:#fff}#contact h2 small{color:var(--sun)}
+.cl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:28px;width:min(1200px,100%)}@media(max-width:900px){.cl{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.cl{grid-template-columns:1fr}}
+.cl a{background:#fff;color:var(--blue);padding:20px 14px;font-size:clamp(.78rem,1.25vw,1rem);border-radius:20px;text-decoration:none;font-weight:800;transition:.3s;word-break:break-word}.cl a:hover{transform:translateY(-6px) rotate(-2deg);background:var(--sun)}
+.cl small{display:block;color:var(--coral);font-size:.7rem;letter-spacing:1px;margin-bottom:4px}
+.rv{opacity:0;transform:translateY(50px) scale(.95);transition:1s}.rv.in{opacity:1;transform:none}
+@media(max-width:800px){#home,#about{grid-template-columns:1fr}nav div{gap:10px}nav b{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01s!important}}
+
+.echo{position:absolute;inset:0;overflow:hidden;z-index:0;display:flex;flex-direction:column;justify-content:center;pointer-events:none}
+.echo div{white-space:nowrap;font-weight:800;font-size:clamp(3rem,9vw,8rem);line-height:.98;color:transparent;-webkit-text-stroke:1.5px color-mix(in srgb,var(--blue) 20%,transparent);will-change:transform}
+.echo div:nth-child(3n){-webkit-text-stroke-color:color-mix(in srgb,var(--coral) 28%,transparent)}.echo div:nth-child(3n+1){-webkit-text-stroke-color:color-mix(in srgb,var(--cyan) 30%,transparent)}
+#band{min-height:0;padding:80px 4vw;text-align:center;background:var(--bg);overflow:hidden}
+#band h3{font-family:Caveat;font-size:1.9rem;color:var(--cyan);margin-bottom:30px}
+.stacks{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(30px,6vw,90px)}
+.stack{display:grid;--s:0;font-weight:800;font-size:clamp(2.4rem,8vw,6.2rem);line-height:1}
+.stack span{grid-area:1/1;transform:translateY(calc((var(--i) - 2) * var(--s) * .62em));color:transparent;-webkit-text-stroke:2px var(--blue);opacity:calc(.25 + var(--s)*.4);will-change:transform}
+.stack span:nth-child(3){color:var(--blue);-webkit-text-stroke:0;opacity:1}
+.stack:nth-child(2) span:nth-child(3){color:var(--coral)}.stack:nth-child(2) span{-webkit-text-stroke-color:var(--coral)}
+.stack:nth-child(3) span:nth-child(3){color:var(--cyan)}.stack:nth-child(3) span{-webkit-text-stroke-color:var(--cyan)}
+.stack:nth-child(4) span:nth-child(3){color:#e8a800}.stack:nth-child(4) span{-webkit-text-stroke-color:#e8a800}
+@keyframes gr{50%{background-position:100% 50%}}
+#contact{background-size:300% 300%!important;animation:gr 12s ease-in-out infinite}
+.guide{display:inline-flex;align-items:center;gap:10px;margin-top:6px;padding:10px 20px;border-radius:40px;background:var(--sun);color:#14213D;font-weight:600;font-size:.95rem}.guide span{display:inline-block;animation:nudge 1.4s ease-in-out infinite}.guide b{color:var(--coral)}@keyframes nudge{50%{transform:translateY(-5px)}}
+</style></head><body>
+<nav><b>Ayushi Soni</b><div><a href="#home">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#hobbies">Hobbies</a><a href="#contact">Contact</a></div></nav>
+
+<section id="home">
+<div class="echo" id="echo" aria-hidden="true"></div>
+<div class="blob" style="width:160px;height:160px;background:var(--sun);top:12%;right:8%"></div><div class="blob" style="width:90px;height:90px;background:var(--cyan);bottom:10%;right:30%;animation-delay:1s"></div><div class="blob" style="width:60px;height:60px;background:var(--coral);top:30%;left:46%;animation-delay:2s"></div>
+<div class="pic"><img src="img/001.png" alt="Ayushi with paint-covered hands"></div>
+<div class="hero"><div class="a" id="l1"></div><div class="b" id="l2"></div>
+<div class="type">I'm <span id="tw"></span></div><a class="btn" href="#work">See my work ✨</a></div>
+</section>
+
+<section id="about"><div class="rv"><h2><small>Nice to meet you</small>I'm Ayushi Soni</h2>
+<p>I'm a design student with a curious eye and a passion for Design and Brand Strategy. I find inspiration in the world around me — through travel, art, creative thinking and the quiet art of observation. I bring intention and energy to everything I create.</p>
+<div class="chips"><span>Brand Strategy</span><span>Brand Design</span><span>Craft Research</span><span>Trend Forecasting</span><span>Sustainability</span></div>
+<p class="quote">“It’s your light that lights the world, ‘World’ is what you created”</p></div>
+<img class="rv" src="img/002.jpg" alt="Ayushi Soni"></section>
+
+<section id="work"><h2 class="rv">My Work</h2>
+<div class="grid">
+<a class="card rv" href="https://www.behance.net/ayushisoni31" target="_blank" rel="noopener"><div class="ph"><img src="img/003.jpg" alt=""><img src="img/004.jpg" alt=""><img src="img/005.jpg" alt=""><img src="img/006.jpg" alt=""></div><div class="t"><div class="tag">BRAND DESIGN</div><h3>ak-ar studio</h3><ul><li>Heritage-inspired logo of two monkeys, from "raw, vintage, crafty" ideas</li><li>Garment tags, labels, promo cards &amp; muslin packaging</li><li>E-commerce website design</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/gallery/248041051/Craft-Research-Document" target="_blank" rel="noopener"><div class="ph"><img src="img/007.jpg" alt=""><img src="img/008.jpg" alt=""><img src="img/009.jpg" alt=""><img src="img/010.jpg" alt=""></div><div class="t"><div class="tag">MASTER'S PROJECT</div><h3>CHAAP — Sanganeri Block Print</h3><ul><li>Research on authenticity of the Chhipa community's craft</li><li>Gap found: traceability of the maker's journey</li><li>Proposed app + smart stud to prove authenticity</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/gallery/256448053/Product-line-extention" target="_blank" rel="noopener"><div class="ph"><img src="img/011.jpg" alt=""><img src="img/012.jpg" alt=""><img src="img/013.jpg" alt=""><img src="img/014.jpg" alt=""></div><div class="t"><div class="tag">BRAND STRATEGY</div><h3>Moschino: Edible Couture</h3><ul><li>Beauty extension: lipstick, eyeshadow &amp; nail paint</li><li>Big idea "Taste the Look", Playful Summer Nostalgia</li><li>Packaging &amp; post-launch marketing plan</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/gallery/248028717/Trend-and-Forecasting" target="_blank" rel="noopener"><div class="ph"><img src="img/015.jpg" alt=""><img src="img/016.jpg" alt=""><img src="img/017.jpg" alt=""><img src="img/018.jpg" alt=""></div><div class="t"><div class="tag">TREND RESEARCH</div><h3>Tech in Fashion (2020–2026)</h3><ul><li>Haystack, PESTEL &amp; CIPHER frameworks</li><li>20 key trends across six dimensions</li><li>AI personalisation, phygital retail, circular supply chains</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/gallery/248041509/Blister-to-Beauty" target="_blank" rel="noopener"><div class="ph"><img src="img/019.jpg" alt=""><img src="img/020.jpg" alt=""><img src="img/021.jpg" alt=""><img src="img/022.jpg" alt=""></div><div class="t"><div class="tag">COLLABORATIVE · SUSTAINABILITY</div><h3>Blister to Beauty</h3><ul><li>Under 1% of 80–100 billion blister packs get recycled</li><li>Collect, segregate, grind, melt: waste into aluminium</li><li>Jewellery prototypes and user feedback</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/gallery/256448247/Environment-on-field-Research" target="_blank" rel="noopener"><div class="ph"><img src="img/023.jpg" alt=""><img src="img/024.jpg" alt=""><img src="img/025.jpg" alt=""><img src="img/026.jpg" alt=""></div><div class="t"><div class="tag">INDUSTRY INTERNSHIP</div><h3>Ocean School India</h3><ul><li>Design Research Intern on Navi Mumbai's mangroves</li><li>Site visits, stakeholder matrix &amp; interviews</li><li>Strategy for the Lakshadweep experiential learning program</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/ayushisoni31" target="_blank" rel="noopener"><div class="ph"><img src="img/027.jpg" alt=""><img src="img/028.jpg" alt=""><img src="img/029.jpg" alt=""><img src="img/030.jpg" alt=""></div><div class="t"><div class="tag">SUSTAINABILITY DESIGN</div><h3>PUMA: RE:Stride · Move For All</h3><ul><li>Adaptive footwear for ageing, diabetic and disabled users (26.8M people with disabilities in India)</li><li>Audit of the SoftRide ecosystem, primary research &amp; user personas</li><li>Circular take-back service, campaign and website prototype</li></ul></div></a>
+<a class="card rv" href="https://www.behance.net/ayushisoni31" target="_blank" rel="noopener"><div class="ph"><img src="img/031.jpg" alt=""><img src="img/032.jpg" alt=""><img src="img/033.jpg" alt=""><img src="img/034.jpg" alt=""></div><div class="t"><div class="tag">BRAND STRATEGY</div><h3>Anamika Khanna: Global Visibility</h3><ul><li>Business model, competitor, store and social media audit</li><li>Primary research revealing the brand's biggest gaps</li><li>Cultural-luxury strategy: museum placement &amp; cross-cultural collaboration</li></ul></div></a>
+</div></section>
+
+<section id="hobbies"><h2 class="rv"><small>Beyond the brief</small>Hobbies</h2><p>Tap a tile to explore.</p>
+<div class="tiles">
+<button class="tile" id="paint" style="background:linear-gradient(to top,rgba(10,20,50,.72),rgba(10,20,50,.05) 65%),url(img/035.jpg) center/cover"><i>🎨</i>Painting<small>34 pieces · open gallery →</small></button>
+<button class="tile" id="travel" style="background:linear-gradient(to top,rgba(10,20,50,.72),rgba(10,20,50,.05) 65%),url(img/036.jpg) center/cover"><i>✈️</i>Travel<small>21 photos · open gallery →</small></button></div>
+<p class="tagline">Always curious, always exploring, always learning</p></section>
+
+
+<div id="modal"><button id="x" aria-label="Close">×</button><h2 id="mt"></h2><div class="gal" id="gal"></div></div>
+
+<div id="lb"><img alt="Painting"></div>
+<section id="contact"><h2 class="rv"><small>Let's create together</small>Say Hello!</h2>
+<div class="cl"><a href="tel:+919329183289"><small>PHONE</small>9329183289</a><a href="mailto:ayushiartsoni09@gmail.com"><small>EMAIL</small>ayushiartsoni09@gmail.com</a>
+<a href="https://www.linkedin.com/in/ayushi-soni-14532b236" target="_blank" rel="noopener"><small>LINKEDIN</small>Ayushi Soni</a><a href="https://www.behance.net/ayushisoni31" target="_blank" rel="noopener"><small>BEHANCE</small>ayushisoni31</a></div></section>
+
+<script>
+// Add painting image sources here once you have them, e.g. PAINTINGS=["data:image/jpeg;base64,..."]
+const PAINTINGS=["img/037.jpg", "img/038.jpg", "img/039.jpg", "img/040.jpg", "img/041.jpg", "img/042.jpg", "img/043.jpg", "img/044.jpg", "img/045.jpg", "img/046.jpg", "img/047.jpg", "img/048.jpg", "img/049.jpg", "img/050.jpg", "img/051.jpg", "img/052.jpg", "img/053.jpg", "img/054.jpg", "img/055.jpg", "img/056.jpg", "img/057.jpg", "img/058.jpg", "img/059.jpg", "img/060.jpg", "img/061.jpg", "img/062.jpg", "img/063.jpg", "img/064.jpg", "img/065.jpg", "img/066.jpg", "img/067.jpg", "img/068.jpg", "img/069.jpg", "img/070.jpg"];const TRAVEL=["img/071.jpg", "img/072.jpg", "img/073.jpg", "img/074.jpg", "img/075.jpg", "img/076.jpg", "img/077.jpg", "img/078.jpg", "img/079.jpg", "img/080.jpg", "img/081.jpg", "img/082.jpg", "img/083.jpg", "img/084.jpg", "img/085.jpg", "img/086.jpg", "img/087.jpg", "img/088.jpg", "img/089.jpg", "img/090.jpg", "img/091.jpg"];
+function split(el,t,d){[...t].forEach((c,i)=>{const s=document.createElement('span');s.className='ch';s.textContent=c===' '?'\u00a0':c;s.style.animationDelay=(d+i*.05)+'s';el.appendChild(s)})}
+split(document.getElementById('l1'),'Evolving as a',.2);split(document.getElementById('l2'),'DESIGNER',.9);
+const W=['Design Researcher','Storyteller','Brand Strategist','Leader','Creative thinker'],tw=document.getElementById('tw');let wi=0,ci=0,del=false;
+(function tick(){const w=W[wi];tw.textContent=w.slice(0,ci);if(!del&&ci<w.length)ci++;else if(!del){del=true;return setTimeout(tick,1300)}else if(ci>0)ci--;else{del=false;wi=(wi+1)%W.length}setTimeout(tick,del?40:90)})();
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+const lb=document.getElementById('lb');lb.onclick=()=>lb.classList.remove('on');const g=document.getElementById('gal'),m=document.getElementById('modal');
+function openG(title,list){document.getElementById('mt').innerHTML='<small>Hobby</small>'+title;g.innerHTML='';list.forEach((s,i)=>{const f=document.createElement('figure');f.style.setProperty('--r',(i%2?1.5:-1.5)+'deg');f.innerHTML=`<img src="${s}" alt="${title} ${i+1}" loading="lazy">`;f.onclick=()=>{lb.querySelector('img').src=s;lb.classList.add('on')};g.appendChild(f)});m.classList.add('on');m.scrollTop=0;document.body.style.overflow='hidden'}
+document.getElementById('paint').onclick=()=>openG('Painting Gallery',PAINTINGS);
+document.getElementById('travel').onclick=()=>openG('Travel Gallery',TRAVEL);
+document.getElementById('x').onclick=()=>{m.classList.remove('on');document.body.style.overflow=''};
+
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const echo=document.getElementById('echo');
+['DESIGNER','EVOLVING','CREATIVE','DESIGNER','ARTIST','EVOLVING','DESIGNER'].forEach(w=>{const d=document.createElement('div');d.textContent=(w+' ').repeat(14);echo.appendChild(d)});
+const rows=[...echo.children],stacks=[];let T=0,last=performance.now();
+(function loop(now){const dt=(now-last)/1000;last=now;if(!rm)T+=dt*28;const sy=scrollY;
+rows.forEach((r,i)=>{const u=r.scrollWidth/14,o=(T*(1+i%3*.4)+sy*(.5+i*.08))%u;r.style.transform=`translateX(${i%2?o-u:-o}px)`});
+const vh=innerHeight;stacks.forEach(s=>{const b=s.getBoundingClientRect(),c=b.top+b.height/2,p=Math.max(0,1-Math.abs(c-vh/2)/(vh*.55));s.style.setProperty('--s',p.toFixed(3))});
+requestAnimationFrame(loop)})(performance.now());
+</script></body></html>
